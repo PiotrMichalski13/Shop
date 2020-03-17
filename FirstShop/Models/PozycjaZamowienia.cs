@@ -2,7 +2,7 @@
 {
     public class PozycjaZamowienia
     {
-        public int PozycjaZamowieiaId { get; set; }
+        public int PozycjaZamowieniaId { get; set; }
         public int ZamowienieId { get; set; }
         public int KursId { get; set; }
         public int Ilosc { get; set; }
