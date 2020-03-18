@@ -14,9 +14,10 @@ namespace FirstShop.Controllers
   
         public ActionResult Index()
         {
-            Kategoria kategoria = new Kategoria { NazwaKategorii = "asp.net mvc", NazwaPlikuIkony = "aspNetMvc.png", OpisKategorii = "opis" };
-               db.Kategorie.Add(kategoria);
-            db.SaveChanges(); 
+          
+
+            var listaKategorii = db.Kategorie.ToList();
+
             return View();
         }
     }
