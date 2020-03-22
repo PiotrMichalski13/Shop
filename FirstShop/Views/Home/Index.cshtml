@@ -1,4 +1,6 @@
-﻿@{ 
+﻿@model FirstShop.ViewModels.HomeViewModel
+@using FirstShop.Inf
+@{ 
     ViewBag.Title = "Praktyczne kursy";
 }
 
@@ -10,42 +12,19 @@
 
     <nav class="kategorieHorizontal">
         <ul>
+            @foreach (var kategoria in Model.Kategorie)
+            {
+
+
+        
             <li>
-                <a href="link" style="background-image: url(../Content/Kategorie/aspnet.png); ">
-                    ASP.NET
+                <a href="@Url.Action("List", "Kursy", new { nazwaKategori = kategoria.NazwaKategorii.ToLower() })" 
+                   style="background-image: url(@Url.KategorieIkonySciezka(kategoria.NazwaPlikuIkony)); ">
+                    @kategoria.NazwaKategorii
                 </a>
             </li>
-            <li>
-                <a href="link" style="background-image: url(../Content/Kategorie/csharp.png); ">
-                    C#
-                </a>
-            </li>
-            <li>
-                <a href="link" style="background-image: url(../Content/Kategorie/css.png); ">
-                    CSS
-                </a>
-            </li>
-            <li>
-                <a href="link" style="background-image: url(../Content/Kategorie/javascript.png); ">
-                    Java Script
-                </a>
-            </li>
-            <li>
-                <a href="link" style="background-image: url(../Content/Kategorie/jquery.png); ">
-                    JQuery
-                </a>
-            </li>
-            <li>
-                <a href="link" style="background-image: url(../Content/Kategorie/xml.png); ">
-                    XML
-                </a>
-            </li>
-            <li>
-                <a href="link" style="background-image: url(../Content/Kategorie/html.png); ">
-                    HTML
-                </a>
-            </li>
-        </ul>
+            }
+        </ul> 
         <a href="link">
             <img id="baner" src="../Content/Images/baner.png" />
         </a>

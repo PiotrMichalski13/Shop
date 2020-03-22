@@ -211,8 +211,7 @@
     <Content Include="Content\Kursy\obrazekmvc.png" />
     <Content Include="Content\Kursy\obrazekmvc2.png" />
     <Content Include="Content\Kursy\obrazekxml.png" />
-    <Content Include="Content\Prototype.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Sitee.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -1018,12 +1017,15 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KursyController.cs" />
     <Compile Include="DAL\KursyContext.cs" />
     <Compile Include="DAL\KursyInitializer.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Inf\AppConfig.cs" />
+    <Compile Include="Inf\UrlHelpers.cs" />
     <Compile Include="Migrations\202003181509460_InitialCreate.cs" />
     <Compile Include="Migrations\202003181509460_InitialCreate.designer.cs">
       <DependentUpon>202003181509460_InitialCreate.cs</DependentUpon>
@@ -1038,6 +1040,7 @@
     <Compile Include="Models\PozycjaZamowienia.cs" />
     <Compile Include="Models\Zamowienie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -1061,6 +1064,7 @@
     <Content Include="Views\Home\Pomoc.cshtml" />
     <Content Include="Views\Home\Regulamin.cshtml" />
     <Content Include="Views\Home\Kontakt.cshtml" />
+    <Content Include="Views\Kursy\Lista.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

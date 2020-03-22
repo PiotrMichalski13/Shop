@@ -18,12 +18,12 @@ namespace FirstShop.DAL
         {
             var kategorie = new List<Kategoria>
             {
-                new Kategoria() {KategoriaId = 1, NazwaKategorii = "asp", NazwaPlikuIkony = "asp.png", OpisKategorii="Opis asp net mvc "},
+                new Kategoria() {KategoriaId = 1, NazwaKategorii = "asp", NazwaPlikuIkony = "aspnet.png", OpisKategorii="Opis asp net mvc "},
                 new Kategoria() {KategoriaId = 2, NazwaKategorii = "java", NazwaPlikuIkony = "java.png", OpisKategorii="Opisjava "},
                 new Kategoria() {KategoriaId = 3, NazwaKategorii = "php", NazwaPlikuIkony = "php.png", OpisKategorii="Opis php "},
                 new Kategoria() {KategoriaId = 4, NazwaKategorii = "python", NazwaPlikuIkony = "python.png", OpisKategorii="Opis python"},
                 new Kategoria() {KategoriaId = 5, NazwaKategorii = "html", NazwaPlikuIkony = "html.png", OpisKategorii="Opis html "},
-                new Kategoria() {KategoriaId = 6, NazwaKategorii = "c#", NazwaPlikuIkony = "cs.png", OpisKategorii="Opis siszarp "},
+                new Kategoria() {KategoriaId = 6, NazwaKategorii = "c#", NazwaPlikuIkony = "css.png", OpisKategorii="Opis siszarp "},
 
             };
             kategorie.ForEach(k=>context.Kategorie.AddOrUpdate(k));
