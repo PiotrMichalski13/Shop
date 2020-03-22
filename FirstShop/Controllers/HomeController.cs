@@ -20,5 +20,10 @@ namespace FirstShop.Controllers
 
             return View();
         }
+
+        public ActionResult StronyStatyczne(string nazwa)
+        {
+            return View(nazwa);
+        }
     }
 }
