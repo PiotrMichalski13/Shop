@@ -1,13 +1,24 @@
-﻿@{ 
-    ViewBag.Title = "Praktyczne kursy";
-}
+﻿
 
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+    <title></title>
+    <link href="../Content/Site.css" rel="stylesheet" />
 </head>
 <body>
-
+    <header>
+        <div style="overflow: hidden;">			
+            <a id="koszykHeaderLink" href="link">
+                Koszyk (0)
+                <span></span>
+            </a>
+			<a id="indexHeaderLogo" href="link">
+				<img src="../Content/Images/logo.png" class="center" />
+			</a>
+        </div>      
+    </header>
+	
     <nav class="kategorieHorizontal">
         <ul>
             <li>
@@ -50,8 +61,8 @@
             <img id="baner" src="../Content/Images/baner.png" />
         </a>
     </nav>
-
-    <section>
+	
+	<section>
         <ul class="KursyTrzyKolumny duzaListaKursy">
             <li>
                 <article>
@@ -145,6 +156,22 @@
         </ul>
     </section>
 
-    
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="link">O nas</a></li>
+				<li><a href="link">Społeczność</a></li>
+				<li><a href="link">Opinie</a></li>            
+                <li><a href="link">Pomoc</a></li>
+                <li><a href="link">Regulamin</a></li>
+				<li><a href="link">Kontakt</a></li>
+            </ul>
+        </nav>
+			<div id="footerLogo">
+        </div>       
+        <div id="footerCopyright">
+            Copyright &copy; 2016 P. Kursy
+        </div>
+    </footer>
 </body>
 </html>
