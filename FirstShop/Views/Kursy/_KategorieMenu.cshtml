@@ -1,0 +1,16 @@
+﻿@model IEnumerable<FirstShop.Models.Kategoria>
+    @using FirstShop.Inf
+
+<nav class="KategorieVertical">
+    <ul>
+        @foreach (var kategorie in Model)
+        {
+            <li>
+                <a href="@Url.Action("Lista","Kursy", new {nazwaKategori = kategorie.NazwaKategorii.ToString() })"
+                   style="background-image: url(@Url.KategorieIkonySciezka(kategorie.NazwaPlikuIkony)  ">
+                 @kategorie.NazwaKategorii
+                </a>
+            </li>
+        }
+    </ul>
+</nav>

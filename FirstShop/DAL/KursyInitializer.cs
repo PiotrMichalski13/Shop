@@ -30,13 +30,13 @@ namespace FirstShop.DAL
             context.SaveChanges();
             var kursy = new List<Kurs>
             {
-                new Kurs() {AutorKursu="Piotrek", TytulKursu="Robienie ludzi w balonik vol. 1", KategoriaId=1, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="kursbalonik.png",
+                new Kurs() {KursId=1, AutorKursu="Piotrek", TytulKursu="Robienie ludzi w balonik vol. 1", KategoriaId=1, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="obrazekcss.png",
                 DataDodania=DateTime.Now, OpisKursu="Jak zrobić w balonik kogoś kto o to prosi"},
-                 new Kurs() {AutorKursu="Wiesiek", TytulKursu="Robienie ludzi w balonik vol. 2", KategoriaId=1, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="kursbalonik.png",
+                 new Kurs() {KursId=2,AutorKursu="Wiesiek", TytulKursu="Robienie ludzi w balonik vol. 2", KategoriaId=1, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="kursbalonik.png",
                 DataDodania=DateTime.Now, OpisKursu="Jak zrobić w balonik kogoś kto o to prosi"},
-                  new Kurs() {AutorKursu="Roman", TytulKursu="Robienie ludzi w balonik vol. 3", KategoriaId=1, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="kursbalonik.png",
+                  new Kurs() {KursId=3, AutorKursu="Roman", TytulKursu="Robienie ludzi w balonik vol. 3", KategoriaId=3, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="kursbalonik.png",
                 DataDodania=DateTime.Now, OpisKursu="Jak zrobić w balonik kogoś kto o to prosi"},
-                   new Kurs() {AutorKursu="Piotrek", TytulKursu="Robienie ludzi w balonik vol. 4", KategoriaId=1, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="kursbalonik.png",
+                   new Kurs() {KursId=4,AutorKursu="Piotrek", TytulKursu="Robienie ludzi w balonik vol. 4", KategoriaId=1, CenaKursu=99, Bestseller=true, NazwaPlikuObrazka="kursbalonik.png",
                 DataDodania=DateTime.Now, OpisKursu="Jak zrobić w balonik kogoś kto o to prosi"}
             };
             kursy.ForEach(k => context.Kursy.AddOrUpdate(k));
