@@ -12,6 +12,10 @@ namespace FirstShop
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapRoute(
+                name: "KursySzczegoly",
+                url: "Kurs-{id}.html",
+                defaults: new { controller = "Kursy", action = "Szczegoly" });
 
             routes.MapRoute(
                 name: "KursyList",

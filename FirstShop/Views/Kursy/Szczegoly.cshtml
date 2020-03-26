@@ -1,0 +1,48 @@
+﻿@model FirstShop.Models.Kurs
+@using FirstShop.Inf
+@{
+    ViewBag.Title = "Szczegoly";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="ListaKategoriZawartosc">
+    @Html.Action("KategorieMenu")
+    <div id="KategorieListPrawaSekcja">
+        <div id="Breadcrumb">
+            <img src="../Content/Images/dommaly.png" />
+            <a href="link">
+                Start > ASP.NET
+            </a>
+        </div>
+        <section id="SekcjaKurs">
+            <div id="KursLewa">
+                <img src="@Url.ObrazkiSciezka(Model.NazwaPlikuObrazka)" />
+            </div>
+            <div id="KursPrawa">
+                <div id="KursNazwa">
+                    <h1>
+                        @Model.TytulKursu
+                    </h1>
+                    <h2>
+                        @Model.AutorKursu
+                    </h2>
+                </div>
+                <div id="KursCena">
+                    <div>
+                        @string.Format("{0:0.##}", Model.CenaKursu)<span>PLN</span>
+                    </div>
+                    <a href="@Url.Action("DodajDoKoszyka", "Koszyk", new { id = Model.KursId })"></a>
+                </div>
+                <div id="KursOpis">
+                    @Model.OpisKursu
+                </div>
+                <div id="KursInfo">
+                    @Model.OpisSkrocony
+                </div>
+
+            </div>
+        </section>
+    </div>
+</div>
+  </div>
+
