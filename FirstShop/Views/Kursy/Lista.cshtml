@@ -10,13 +10,45 @@
     <div id="KategorieListPrawaSekcja">
         <div id="Breadcrumb">
             <img src="../Content/Images/dommaly.png" />
-           
-                Start > ASP.NET
+
+            Start > ASP.NE
             </a>
+
+            <form id="search-form" method="get" data-ajax="true" data-ajax-target="#SekcjaListaKategori">
+            <input id="search-filter" type="search" name="searchQuery"
+                   data-autocomplete-source="@Url.Action("KursyPodpowiedzi")"
+                   placeholder="Wprowadź tekst, aby wyfiltrować..." />
+            <input type="submit" value="" />
+            </form>
         </div>
 
         <div id="SekcjaListaKategori">
             @Html.Partial("_KursyList")
         </div>
     </div>
-</div> 
+</div>
+
+@section Scripts
+    {
+        @System.Web.Optimization.Scripts.Render("~/bundles/jquery")
+}
+
+<script>
+    $(function () {
+        var setupAutoComplete = function () {
+            var $input = $(this);
+            var options =
+            {
+                source: $input.attr("data-autocomplete-source"),
+                select: function (event, ui) {
+                    $input = $(this);
+                    $input.val(ui.item.label);
+                    var $form = $input.parents("form:first");
+                    $form.submit();
+                }
+            };
+            $input.autocomplete(options);
+        };
+    }};
+        </script>
+    
